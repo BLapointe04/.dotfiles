@@ -1,0 +1,40 @@
+https://github.com/BLapointe04/.dotfiles
+
+In this lab, I created a GitHub repo named .dotfiles and used Git to push 
+the files from my terminal on my mac to the remote repo. I first began by 
+logging into  my GitHub since I already have one and then generating the 
+SSH key. I couldn't find that at first which had me worried from the 
+beginning. After managing to find the key input and configuring the Git 
+with my user and email I made the dotfiles, and then created the files 
+needed for the dotfiles. Then I initialized the local repo and added the 
+files to the staging area, did the commit, and then set up the remote repo 
+on GitHub.
+Now one of the main challenges I faced during this lab was dealing with 
+the synchronization between my local and remote repos. When I tried to 
+push my changes to github, I got rejected a lot because the remote repo 
+contained previous commits that my actual local repo did not have. After 
+going back through the instructions and redoing some work I was finally 
+able to resolve my problem and connect and push the changes to Github. 
+And then another challenge occurred while setting up my SHH key for the 
+connection with GitHub. Initially I had some issues while trying to copy 
+the key to my github but once again after rereading the instructions and 
+using the correct file, I was able to authenticate. These challenges 
+really showed me the value of rereading the instructions and making sure 
+to pay attention to my work and how I go through the instructions. 
+ By the end of the lab, I successfully managed to push my dotfiles repo to 
+the github which contains all the files. I really did gain a better 
+understanding of linking repo and githubs along with the value of closer 
+reading, as well as being able to resolve issues when working with Git. 
+git config --global user.name "Brayden Lapointe"
+git config --global user.email "lapointb@email.sc.edu"
+ssh-keygen -t ed25519 -a 203 -f ~/.ssh/github/id_ed25519
+cat ~/.ssh/github/id_ed25519.pub
+git init
+git add --all
+git commit -m "INIT commit"
+git branch -M main
+git remote add origin git@github.com:BLapointe04/.dotfiles.git
+git push -u origin main
+https://education.github.com/git-cheat-sheet-education.pdf 
+https://www.git-tower.com/blog/command-line-cheat-sheet/ 
+https://gist.github.com/bradtraversy/cc180de0edee05075a6139e42d5f28ce  
